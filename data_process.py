@@ -1,5 +1,5 @@
 import os
-from scipy import ndimage
+import cv2
 import numpy as np
 from six.moves import cPickle as Pickle
 import csv
@@ -34,7 +34,7 @@ def load_letter(folder, min_num_images):
     for image_index, image in enumerate(image_files):
         image_file = os.path.join(folder, image)
         try:
-            image_data = 1 * (ndimage.imread(image_file).astype(float) > pixel_depth / 2)
+            image_data = 1 * (cv2.imread(image_file, cv2.IMREAD_UNCHANGED).astype(float) > pixel_depth / 2)
             if image_data.shape != (image_size, image_size):
                 raise Exception('Unexpected image shape: %s' % str(image_data.shape))
             dataset[image_index, :, :] = image_data

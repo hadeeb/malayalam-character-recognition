@@ -2,7 +2,7 @@
 from functions import *
 
 
-RAW_FOLDER = 'orig_data'
+RAW_FOLDER = 'raw_data'
 CLEAN_FOLDER = 'data'
 
 FOLDER_LIST = list_folders(RAW_FOLDER)

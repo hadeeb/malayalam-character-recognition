@@ -3,7 +3,7 @@ import shutil
 import Augmentor
 from functions import list_folders
 
-folder = 'orig_data'
+folder = 'raw_data'
 for f in list_folders(folder):
     if os.path.isdir(os.path.join(folder, f, 'output')):
         shutil.rmtree(os.path.join(folder, f, 'output'))

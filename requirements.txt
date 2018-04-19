@@ -1,6 +1,5 @@
 tensorflow
 keras
 numpy
-scipy
 opencv-python
 Augmentor
