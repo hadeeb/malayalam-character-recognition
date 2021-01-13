@@ -3,3 +3,4 @@ keras
 numpy
 opencv-python
 Augmentor
+pillow>=8.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
